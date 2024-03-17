@@ -7,8 +7,8 @@ import WinnerModel from "./WinnerModel";
 import audioPath from "../assets/audio/wheel.mp3";
 import ShopIcon from '../assets/shop (1).png'
 import ExitGameIcon from '../assets/ExitGame.png'
-import {ReactComponent as SoundMute} from '../assets/soundMute.svg'
-import {ReactComponent as SoundUp} from '../assets/soundUp.svg'
+import { ReactComponent as SoundMute } from '../assets/soundMute.svg'
+import { ReactComponent as SoundUp } from '../assets/soundUp.svg'
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -23,10 +23,11 @@ export default function GameTable(props) {
     resultColor: "#06562c",
     resultOddAndEven: "",
   };
-
+  const getSoundData = localStorage.getItem("soundOn")
 
   const [resultShow, setResultShow] = useState(resultObjDeflut);
-  const [shopModelShow,setShopModelShow]=useState(false)
+  const [shopModelShow, setShopModelShow] = useState(false)
+  const [soundOn, setSoundOn] = useState(getSoundData?.length === 0 ? true : getSoundData)
   const [resultOld, setResultOld] = useState(resultObjDeflut);
   const {
     userData,
@@ -107,21 +108,24 @@ export default function GameTable(props) {
   }
 
   const playSoundFunction = async () => {
-    let audio = new Audio(audioPath);
-    audio.volume = muteSound ? 0 : 1;
-    const playPromise = audio.play();
+    if (soundOn) {
+      let audio = new Audio(audioPath);
+      audio.volume = soundOn ? 1: 0;
+      const playPromise = audio.play();
 
-    if (playPromise !== undefined) {
-      try {
-        await playPromise;
-        // Audio started playing
-      } catch (error) {
-        // Handle potential errors
-        console.error("Error playing audio:", error);
+      if (playPromise !== undefined) {
+        try {
+          await playPromise;
+          // Audio started playing
+        } catch (error) {
+          // Handle potential errors
+          console.error("Error playing audio:", error);
+        }
       }
     }
   };
 
+  
   const spinWheel = async (number) => {
     await playSoundFunction();
     const bezier = [0.165, 0.84, 0.44, 1.005];
@@ -204,6 +208,10 @@ export default function GameTable(props) {
       easing: `cubicBezier(${bezier.join(",")})`,
     });
   };
+  const handleSoundOn = () => {
+    setSoundOn(!soundOn)
+    localStorage.setItem("soundOn", soundOn)
+  }
 
   useEffect(() => {
     if (props.startTime === -2) {
@@ -216,12 +224,13 @@ export default function GameTable(props) {
 
   }, [spinNumber, props.startTime]);
 
+
   return (
     <>
       <div className="buttonMetnuTop">
         <div className="buttonBox">
-          <button className="buttonIcon" onClick={()=>setShopModelShow(!shopModelShow)}><img src={ShopIcon} /></button>
-          <button className="buttonIcon">{true ? <SoundUp/> :<SoundMute/>}</button>
+          <button className="buttonIcon" onClick={() => setShopModelShow(!shopModelShow)}><img src={ShopIcon} /></button>
+          <button className="buttonIcon" onClick={handleSoundOn}>{soundOn ? <SoundUp /> : <SoundMute />}</button>
           <button className="buttonIcon "><img src={ExitGameIcon} /></button>
         </div>
       </div>
@@ -231,6 +240,7 @@ export default function GameTable(props) {
         socketRef={socketRef}
         resultShow={resultShow}
         isActive={isActive}
+        soundOn={soundOn}
         openModel={isOpen}
         setGameCoin={setGameCoin}
         gameCoin={gameCoin}
@@ -239,7 +249,7 @@ export default function GameTable(props) {
         setIsOpenModel={setIsOpen}
         resultOld={resultOld}
       />
-      <ShopModel setShopModelShow={setShopModelShow} shopModelShow={shopModelShow} userData={userData}/>
+      <ShopModel setShopModelShow={setShopModelShow} shopModelShow={shopModelShow} userData={userData} />
     </>
   );
 }

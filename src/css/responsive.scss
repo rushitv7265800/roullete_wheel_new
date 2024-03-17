@@ -827,9 +827,9 @@
   }
 
   .shopModel {
-    transform: translate(0%, 50%);
-    bottom: 26%;
-    top: unset !important;
+    transform: rotate(-90deg);
+    bottom: 0%;
+    top: 25vh !important;
 
     .closeModel {
       right: -12px;

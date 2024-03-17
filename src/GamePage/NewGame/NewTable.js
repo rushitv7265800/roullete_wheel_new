@@ -106,6 +106,7 @@ export default function NewTable(props) {
     userData,
     setGameCoin,
     gameCoin,
+    soundOn,
     socketRef,
     resultShow,
     muteSound,
@@ -157,18 +158,21 @@ export default function NewTable(props) {
   }, [socketRef?.current]);
 
   const playSoundFunction = async () => {
-    let audio = new Audio(audioPath);
+    if (soundOn) {
+      let audio = new Audio(audioPath);
+      console.log("soundOn", soundOn)
 
-    audio.volume = muteSound ? 0 : 1;
-    const playPromise = audio.play();
+      audio.volume = soundOn ? 1: 0;
+      const playPromise = audio.play();
 
-    if (playPromise !== undefined) {
-      try {
-        await playPromise;
-        // Audio started playing
-      } catch (error) {
-        // Handle potential errors
-        console.error("Error playing audio:", error);
+      if (playPromise !== undefined) {
+        try {
+          await playPromise;
+          // Audio started playing
+        } catch (error) {
+          // Handle potential errors
+          console.error("Error playing audio:", error);
+        }
       }
     }
   };
@@ -953,10 +957,10 @@ export default function NewTable(props) {
         </div>
 
       </div>
-      {/* <WinnerModel open={isOpen}
+      <WinnerModel open={isOpen}
         mineTotalWin={mineTotalWin}
         resultShow={resultNo}
-        setIsOpen={setIsOpen} /> */}
+        setIsOpen={setIsOpen} />
     </>
   )
 }
