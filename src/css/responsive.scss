@@ -446,8 +446,6 @@
     }
   }
 
-  .svg-loader-show {}
-
   .login-page .form-structor .signup .form-title {
     display: flex;
     align-items: center;
@@ -472,6 +470,16 @@
     width: 100vh;
     height: 100vh;
     transform: rotate(90deg);
+
+    .buttonMetnuTop {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      right: 3vh;
+      top: 50vh;
+      z-index: 9999;
+      transform: translate(0%, 0%);
+    }
 
     .result-show {
       position: absolute;
@@ -666,6 +674,10 @@
             }
           }
 
+          .table-box {
+            margin-top: 0vh !important;
+          }
+
           .table-body {
             .bet-details {
               .bet-box {
@@ -770,47 +782,148 @@
   .winnerBg {
     width: 100vh;
   }
-  .winnerModel{
-  .winnerModel-bg {
-    height: 200px !important;
-    background-size: 100% 200px !important;
-    transform: translate(0%, 50%) !important;
-    top: 47%;
-    left: 18%;
-    width: 50vh;
 
-    .model-head {
-      img {
-        margin-top: -24px;
-        width: 250px;
-        height: 100px;
-      }
+  .winnerModel {
+    .winnerModel-bg {
+      height: 200px !important;
+      background-size: 100% 200px !important;
+      transform: translate(0%, 50%) !important;
+      top: 47%;
+      left: 18%;
+      width: 50vh;
 
-      .model-body {
-        margin-top: -33px;
+      .model-head {
+        img {
+          margin-top: -24px;
+          width: 250px;
+          height: 100px;
+        }
 
-        .winner-fram {
-          width: 75px;
-          height: 75px;
-          background-size: 75px 75px;
-          margin-top: 10px;
+        .model-body {
+          margin-top: -33px;
 
-          h6 {
-            span {
-              font-size: 17px;
-              margin-top: 1px;
+          .winner-fram {
+            width: 75px;
+            height: 75px;
+            background-size: 75px 75px;
+            margin-top: 10px;
 
+            h6 {
+              span {
+                font-size: 17px;
+                margin-top: 1px;
+
+              }
             }
-          }
 
-          h5 {
-            margin-top: 20px;
-            font-size: 15px;
-          }
+            h5 {
+              margin-top: 20px;
+              font-size: 15px;
+            }
           }
         }
       }
     }
   }
 
+  .shopModel {
+    transform: translate(0%, 50%);
+    bottom: 26%;
+    top: unset !important;
+
+    .closeModel {
+      right: -12px;
+      top: -18px;
+      background-color: #10ab74;
+      border: 0px solid #10ab74;
+      z-index: 11111111;
+      padding: 6px;
+      border-radius: 60px;
+      width: 30px;
+      height: 30px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .shopBg {
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      background-color: rgba(0, 0, 0, 0);
+      height: 100vh;
+      text-align: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100vh;
+    }
+
+    .shopModelShow {
+      .shopModel-bg {
+        width: 40vh;
+        height: 44vh;
+        border-radius: 15px;
+        background-size: 100% 44vh;
+
+        .model-head {
+          .shopTitle {
+            border-radius: 46px;
+            width: 50%;
+            padding: 8px;
+            margin-top: -18px;
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+
+            h6 {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .model-body {
+          margin-top: 6px;
+
+          thead {
+            tr {
+              th {
+                font-size: 14px;
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              td {
+                margin: 5px 0px;
+
+                .priceShow {
+                  img {
+                    width: 20px;
+                    height: 20px;
+                  }
+
+                  h6 {
+                    font-size: 14px;
+                    margin-left: 4px;
+                  }
+                }
+
+                button {
+                  min-width: 70px;
+                  width: 70px;
+                  border-radius: 3px;
+                  font-size: 12px;
+                  outline: 3px solid #11b178 !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
+
+}

@@ -953,10 +953,10 @@ export default function NewTable(props) {
         </div>
 
       </div>
-      <WinnerModel open={isOpen}
+      {/* <WinnerModel open={isOpen}
         mineTotalWin={mineTotalWin}
         resultShow={resultNo}
-        setIsOpen={setIsOpen} />
+        setIsOpen={setIsOpen} /> */}
     </>
   )
 }

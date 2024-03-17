@@ -220,7 +220,7 @@ export default function GameTable(props) {
     <>
       <div className="buttonMetnuTop">
         <div className="buttonBox">
-          <button className="buttonIcon" onClick={()=>setShopModelShow(true)}><img src={ShopIcon} /></button>
+          <button className="buttonIcon" onClick={()=>setShopModelShow(!shopModelShow)}><img src={ShopIcon} /></button>
           <button className="buttonIcon">{true ? <SoundUp/> :<SoundMute/>}</button>
           <button className="buttonIcon "><img src={ExitGameIcon} /></button>
         </div>
