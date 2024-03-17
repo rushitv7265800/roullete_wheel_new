@@ -1298,7 +1298,8 @@ body {
     background-size: 100% 300px;
     z-index: 999;
     top: 10%;
-    left: 0;
+    right: 50%;
+    left: unset;
     background-repeat: no-repeat;
     position: absolute;
     transform: translate(50%, 50%);

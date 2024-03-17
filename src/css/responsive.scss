@@ -779,52 +779,7 @@
     }
   }
 
-  .winnerBg {
-    width: 100vh;
-  }
 
-  .winnerModel {
-    .winnerModel-bg {
-      height: 200px !important;
-      background-size: 100% 200px !important;
-      transform: translate(0%, 50%) !important;
-      top: 47%;
-      left: 18%;
-      width: 50vh;
-
-      .model-head {
-        img {
-          margin-top: -24px;
-          width: 250px;
-          height: 100px;
-        }
-
-        .model-body {
-          margin-top: -33px;
-
-          .winner-fram {
-            width: 75px;
-            height: 75px;
-            background-size: 75px 75px;
-            margin-top: 10px;
-
-            h6 {
-              span {
-                font-size: 17px;
-                margin-top: 1px;
-
-              }
-            }
-
-            h5 {
-              margin-top: 20px;
-              font-size: 15px;
-            }
-          }
-        }
-      }
-    }
-  }
 
   .shopModel {
     transform: rotate(-90deg);
@@ -926,4 +881,51 @@
     }
   }
 
+  .winnerBg {
+    width: 100vh;
+  }
+
+  .winnerModel {
+    .winnerModel-bg {
+      height: 200px !important;
+      background-size: 100% 200px !important;
+      transform: translate(0%, 50%) !important;
+      top: 47%;
+      left: 18%;
+      right: unset !important;
+      width: 50vh;
+
+      .model-head {
+        img {
+          margin-top: -24px;
+          width: 250px;
+          height: 100px;
+        }
+
+        .model-body {
+          margin-top: -33px;
+
+          .winner-fram {
+            width: 75px;
+            height: 75px;
+            background-size: 75px 75px;
+            margin-top: 10px;
+
+            h6 {
+              span {
+                font-size: 17px;
+                margin-top: 1px;
+
+              }
+            }
+
+            h5 {
+              margin-top: 20px;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
