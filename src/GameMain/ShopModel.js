@@ -26,7 +26,7 @@ export default function ShopModel(props) {
   });
 
   const handleCreateOrder = async (price, currency, amount,) => {
-    axios.post('http://localhost:5040/razorpay/create-order', { amount: price, receipt: `${amount + "Coin Purchase"}` })
+    axios.post('https://roulette-wheel-game.onrender.com/razorpay/create-order', { amount: price, receipt: `${amount + "Coin Purchase"}` })
       .then(response => {
         setOrderDetails({
           ...orderDetails,
