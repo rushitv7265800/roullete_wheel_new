@@ -60,36 +60,6 @@ export default function HomePage() {
                                 </div>
                             </div>
                         </div>
-
-                        {/* <div className="head-profile">
-                                <div className='headbody'>
-                                    <div className='profileImgText'>
-                                        <div className='profileTop'>
-                                            <img src={AvtarImg} />
-                                            <div className='profileText'>
-                                                <h6>Jhone Doe</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='headIcon'>
-                                        <div className="iconImg">
-                                            <img src={SettingIcon} />
-                                        </div>
-                                        <div className="iconImg">
-                                            <img src={NotificationIcon} />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="walletImg">
-                                    <div className='walleteBox'>
-                                        <img src={WalletImg} />
-                                        <h6>100</h6>
-                                        <div className='addIcon'>
-                                            <span>+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> */}
                     </div>
                 </div>
                 <div className="homeBody">
@@ -133,7 +103,7 @@ export default function HomePage() {
 
                             </div>
                         </div>
-                        <div className='col-8 col-md-6'>
+                        <div className='col-4 col-md-6'>
                             <div className='LogoShowHome'>
                                 <div className="logoShowImg">
                                 <img src={Logo} className='logoImg'/>
@@ -152,7 +122,27 @@ export default function HomePage() {
 
                             </div>
                         </div>
-                        <div className="col-0 col-md-4"></div>
+                        <div className="col-4 col-md-4">
+                        <div className='menuShow mobileView' style={{display:"none"}}>
+                                    <div className='iconShow' onClick={()=>setSettingOpen(!settingOpen)}>
+                                        <img src={SettingIcon} />
+                                        <span>Setting</span>
+                                </div>
+                                    <div className='iconShow'>
+                                        <img src={HelpDeskIcon} />
+                                        <span>Support</span>
+                                </div>
+                                    <div className='iconShow' onClick={()=>setPromotionModelOpen(!promotionModelOpen)}>
+                                        <img src={PromotionIcon} />
+                                        <span>Promotion</span>
+                                </div>
+                                    <div className='iconShow'>
+                                        <img src={HelpIcon} />
+                                        <span>Help</span>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
 

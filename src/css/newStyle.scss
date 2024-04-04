@@ -845,6 +845,7 @@ body {
                 &:nth-child(2) {
                     border: 2px solid #FFF500;
                 }
+
                 img {
                     width: 30px;
                     height: 30px;
@@ -892,6 +893,281 @@ body {
             border: none;
             color: white;
             padding: 6px 20px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .homePage {
+        transform: rotate(90deg);
+        overflow: hidden;
+        width: 100vh;
+        background-size: 100vh 100vh;
+        margin-left: -50vh;
+
+        .headHomePage {
+            .leftSidePage {
+                .avtarShow {
+                    .imgShow {
+                        width: 40px;
+                        height: 40px;
+
+                        img {
+                            width: 40px;
+                            height: 40px;
+
+                        }
+
+                        span {
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .coinShowHomePage {
+                    min-width: 88px;
+
+                    .showImg {
+                        img {
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                        h6 {
+                            margin-left: 6px;
+                            margin-bottom: 0px;
+                            font-size: 12px;
+
+                        }
+                    }
+
+                    .addIcon {
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                }
+            }
+
+            .walletImg {
+                margin-right: 10vh;
+
+                .walleteBox {
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        left: -12px;
+                    }
+
+                    h6 {
+                        font-size: 14px;
+                    }
+
+                    .addIcon {
+                        width: 20px;
+                        height: 20px;
+                        right: -6px;
+                    }
+                }
+            }
+        }
+
+        .homeBody {
+            margin-top: 1vh;
+
+            .menuShow {
+                max-width: 25vh;
+                margin-top: 25px;
+
+                .iconShow {
+                    margin: 8px 0px;
+                    padding: 11px;
+
+                    &:nth-child(5) {
+                        display: none !important;
+                    }
+
+                    &:nth-child(6) {
+                        display: none !important;
+                    }
+
+                    &:nth-child(7) {
+                        display: none !important;
+                    }
+
+                    &:nth-child(8) {
+                        display: none !important;
+                    }
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    span {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .mobileView {
+                display: block !important;
+            }
+
+            .LogoShowHome {
+                .logoShowImg {
+                    margin-top: 0vh;
+
+                    .logoImg {
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+
+                .GameShowHome {
+                    margin-top: 0vh;
+
+                    .gameShowBox {
+                        width: 140px;
+                        height: 116px;
+
+                        span {
+                            font-size: 12px;
+                        }
+
+                        img {
+                            width: 35px;
+                            height: 35px;
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .withmodel{
+        transform: rotate(90deg);
+        width: 100vh;
+        .withModelHead{
+            .closeModelIcon{
+                width: 48px;
+                height: 46px;
+                .closeModelBg{
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+            h6{
+                font-weight: 400;
+            }
+        }
+        .withModelbody{
+            overflow: scroll;
+            max-height: 43vh;
+        }
+    }
+    .model {
+        transform: rotate(90deg);
+        width: 100vh;
+        margin-left: -23vh;
+
+        .modelMain {
+            .modelHead {
+                border-radius: 16px 16px 0px 0px;
+                padding: 6px 10px;
+
+                .closeIcon {
+                    width: 30px;
+                    height: 30px;
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+
+            .modelBody {
+                border-radius: 0px 0px 16px 16px;
+                padding-bottom: 13px !important;
+                max-height: 35vh;
+                overflow: scroll;
+                padding: 6px 13px;
+            }
+        }
+    }
+
+    .profileView {
+        .profileEdit {
+            .profileDetialsShow {
+                .showImg {
+                    width: 56px;
+                    height: 56px;
+
+                    img {
+                        width: 38px;
+                        height: 38px;
+                    }
+
+                    i {
+                        right: -5px;
+                        width: 23px;
+                        height: 23px;
+                        bottom: -4px;
+                    }
+                }
+
+                .profileDetails {
+                    h6 {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        .profileAvtarProfile {
+            gap: 8px;
+            margin-top: 30px;
+
+            .showImg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        form {
+            .inputProfileBox {
+                .inputShowProfile {
+
+                    label {
+                        margin-top: 5px;
+                        font-size: 13px;
+
+                    }
+
+                    input {
+                        font-size: 13px;
+                        margin-top: 2px;
+                    }
+                }
+            }
+
+            button {
+                margin-top: 27px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                outline: none;
+                background-color: #3da0c3;
+                border: none;
+                color: white;
+                padding: 5px 15px;
+                font-size: 13px;
+            }
         }
     }
 }
