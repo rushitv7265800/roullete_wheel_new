@@ -332,22 +332,22 @@ export default function NewTable(props) {
     let totalWinner;
     switch (fram) {
       case 1:
-        totalWinner = amount * 36;
+        totalWinner = amount * 20;
         break;
       case 2:
-        totalWinner = amount * 3;
+        totalWinner = amount * 2;
         break;
       case 3:
-        totalWinner = amount * 3;
+        totalWinner = amount * 2;
         break;
       case 4:
-        totalWinner = amount * 3;
+        totalWinner = amount * 2;
         break;
       case 5:
-        totalWinner = amount * 2;
+        totalWinner = amount * 3;
         break;
       case 6:
-        totalWinner = amount * 2;
+        totalWinner = amount * 3;
         break;
       case 7:
         totalWinner = amount * 2;
@@ -624,7 +624,6 @@ export default function NewTable(props) {
     const winningFrames = data
       ?.filter((item) => item?.winner)
       ?.map((item) => item?.selectFrame);
-
     return winningFrames;
   };
 
@@ -771,7 +770,7 @@ export default function NewTable(props) {
                     <Frame
                       totalBet={"5000"}
                       myBet={"400"}
-                      multiCoin={"36"}
+                      multiCoin={"20"}
                       betDetails={"0"}
                       coins={framesTotalCoins[0]}
                       mine={framesTotalMine[0]}
@@ -785,8 +784,8 @@ export default function NewTable(props) {
                     <Frame
                       totalBet={"6000"}
                       myBet={"600"}
-                      multiCoin={"3"}
-                      betDetails={"1-12"}
+                      multiCoin={"2"}
+                      betDetails={"1-15"}
                       coins={framesTotalCoins[1]}
                       mine={framesTotalMine[1]}
                       arrCoins={arrCoins[1]}
@@ -799,8 +798,8 @@ export default function NewTable(props) {
                     <Frame
                       totalBet={"5000"}
                       myBet={"0"}
-                      multiCoin={"3"}
-                      betDetails={"13-24"}
+                      multiCoin={"2"}
+                      betDetails={"16   -25"}
                       coins={framesTotalCoins[2]}
                       mine={framesTotalMine[2]}
                       gameCoin={gameCoin}
@@ -813,8 +812,8 @@ export default function NewTable(props) {
                     <Frame
                       totalBet={"4000"}
                       myBet={"0"}
-                      multiCoin={"3"}
-                      betDetails={"25-36"}
+                      multiCoin={"2"}
+                      betDetails={"26-36"}
                       coins={framesTotalCoins[3]}
                       mine={framesTotalMine[3]}
                       arrCoins={arrCoins[3]}
@@ -827,7 +826,7 @@ export default function NewTable(props) {
                     <Frame
                       totalBet={"5000"}
                       myBet={"0"}
-                      multiCoin={"2"}
+                      multiCoin={"3"}
                       betDetails={"Red"}
                       coins={framesTotalCoins[4]}
                       mine={framesTotalMine[4]}
@@ -841,7 +840,7 @@ export default function NewTable(props) {
                     <Frame
                       totalBet={"5000"}
                       myBet={"0"}
-                      multiCoin={"2"}
+                      multiCoin={"3"}
                       betDetails={"Black"}
                       coins={framesTotalCoins[5]}
                       mine={framesTotalMine[5]}

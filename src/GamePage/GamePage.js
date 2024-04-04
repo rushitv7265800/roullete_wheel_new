@@ -1,14 +1,16 @@
 import axios from "axios";
 import GameTable from "../GameMain/GameTable";
 import { useCallback, useEffect, useRef, useState } from "react";
+import io from "socket.io-client";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { baseURL } from "../App";
 
 
 const queryParams = new URLSearchParams(window.location.search);
-const userId = queryParams.get("id");
+const userId = queryParams.get("id") ? queryParams.get("id") : "6527da15bdfb0b7c39fd700f";
 
+let historyRecord = [];
 const rouletteWheelNumbers = [
   0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36, 11, 30, 8, 23, 10, 5, 24,
   16, 33, 1, 20, 14, 31, 9, 22, 18, 29, 7, 28, 12, 35, 3, 26,
@@ -17,17 +19,11 @@ const rouletteWheelNumbers = [
 const gameNumber = [50, 100, 200, 400, 800, 1000];
 const soundGet = JSON.parse(localStorage.getItem("sound"));
 function GamePage(props) {
-  const {
-    setUserData,
-    userData,
-    time,
-    setTime,
-    socketRef,  
-    historyRecord
-  } = props
   const [numberSelect, setNumberSelect] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [rouletteData, setRouletteData] = useState();
+  const [userData, setUserData] = useState({});
+  const [time, setTime] = useState();
   const [number, setNumber] = useState();
   const [isActive, setIsActive] = useState(true);
   const numberRef = useRef(null);
@@ -35,6 +31,7 @@ function GamePage(props) {
   const [historyModel, setHistoryModel] = useState(false);
   const [muteSound, setMuteSound] = useState(soundGet);
   const [getRules, setGetRules] = useState("");
+  const socketRef = useRef(null)
   const [gameCoin, setGameCoin] = useState(gameNumber);
   const [state, setState] = useState({
     rouletteData: {
@@ -44,6 +41,36 @@ function GamePage(props) {
       next: "Spin",
     },
   });
+
+  useEffect(() => {
+    const socket = io.connect(baseURL, {
+      transports: ["websocket", "polling", "flashsocket"],
+      query: { globalRoom: userId },
+    });
+    if (userId) {
+      socketRef.current = socket;
+      socketRef.current.on("connect", () => {
+        if (socket.connected === true) {
+          setTimeout(() => {
+            socket.emit("startGame", {});
+            socket.on("start", (data) => {
+              console.log("data", data);
+              setUserData(data);
+            });
+
+            socketRef.current?.on("time", (time) => {
+              setTime(time);
+            });
+          }, 1000);
+        }
+      });
+
+      socketRef.current?.on("historyRecord", (historyRecordData) => {
+        historyRecord = historyRecordData;
+      });
+    }
+  }, [userId]);
+
 
   useEffect(() => {
     localStorage.setItem("sound", muteSound);

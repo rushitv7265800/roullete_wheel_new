@@ -39,25 +39,29 @@ body {
   background-repeat: no-repeat;
 }
 
+#modal {
+  height: 80% !important;
+}
+
 @keyframes changeColorBoarder {
   0% {
     border-color: rgb(255, 255, 255);
   }
 
   25% {
-    border-color: rgb(255, 255, 10);
+    border-color: rgb(197, 86, 34);
   }
 
   50% {
-    border-color: rgb(147, 193, 19);
+    border-color: rgb(212, 132, 40);
   }
 
   75% {
-    border-color: rgb(151, 217, 7);
+    border-color: rgb(218, 128, 27);
   }
 
   100% {
-    border-color: rgb(68, 193, 19);
+    border-color: rgb(231, 95, 4);
   }
 }
 
@@ -456,7 +460,8 @@ body {
 
               span {
                 font-size: 15px;
-                color: #f2f236;
+                // color: #f2f236;
+                color: white
               }
             }
           }
@@ -595,7 +600,6 @@ body {
                 font-size: 18px;
                 margin-bottom: 2px;
 
-                span {}
               }
             }
           }
@@ -907,8 +911,8 @@ body {
 .coinShow {
   display: flex;
   position: absolute;
-  width: 35px !important;
-  height: 35px !important;
+  width: 30px !important;
+  height: 30px !important;
   border-radius: 100%;
   border: 0px;
   background-repeat: no-repeat;
@@ -2071,7 +2075,9 @@ body {
 
 
         .bet-box {
-          border: 2px solid #33aa33;
+          // border: 2px solid #33aa33;
+          border: 2px solid rgba(255, 229, 12, 0.7490196078);
+
           cursor: pointer;
           border-radius: 6px;
           text-align: center;
@@ -2079,10 +2085,12 @@ body {
           height: 14vh;
 
           .bet-top {
-            background-color: #2e992e75;
+            // background-color: #2e992e75;
+            background-color: rgba(255, 229, 12, 0.7490196078);
 
             h6 {
-              color: #f2f236;
+              // color: #f2f236;
+              color: white;
               font-size: 14px;
               margin-bottom: 0px;
               padding: 3px 0px;
@@ -2517,6 +2525,83 @@ body {
         border-radius: 10px;
         background-color: #f50045;
         transition: width 100ms ease;
+      }
+    }
+  }
+}
+
+.comPlayer {
+  .coin-button-box {
+    margin-right: 11vh !important;
+  }
+
+  .coinBoxMine {
+    .coinShow {
+      span {
+        font-size: 11px !important;
+      }
+    }
+  }
+
+  .spin-button {
+    right: 21% !important;
+  }
+
+  .disabledSpinBtn {
+    opacity: 0.6;
+    box-shadow: none !important;
+    transform: unset !important;
+  }
+
+  .showBetHed {
+    height: 45px !important;
+
+    .showBetData {
+      height: 35px;
+    }
+
+  }
+
+  .tableHead {
+    padding-top: 23px !important;
+  }
+
+  .userDetails {
+    display: flex;
+    align-items: center;
+    margin-left: 1vh;
+    height: 60px;
+    background-color: rgb(23 141 96 / 63%);
+    position: absolute;
+    z-index: 99;
+    top: 10px;
+    right: 13px;
+    border: 1px solid #33aa33;
+    padding: 5px;
+    border-radius: 10px;
+
+    .user-avtar {
+      img {
+        border: 3px solid #d2d931;
+        width: 50px;
+        border-radius: 50%;
+        height: 50px;
+      }
+    }
+
+    .user-balance {
+      margin-left: 8px;
+
+      h6 {
+        color: white;
+        margin-bottom: 2px;
+        font-size: 14px;
+      }
+
+      h5 {
+        color: #d2d931;
+        margin: 0px;
+        font-size: 15px;
       }
     }
   }

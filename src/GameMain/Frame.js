@@ -12,6 +12,7 @@ export default function Frame({
   totalBet,
   myBet,
   betDetails,
+  comPlayer,
   mineCoin,
   multiCoin,
   gameCoin,
@@ -134,7 +135,17 @@ export default function Frame({
       >
         <div className="bet-top">
           <h6>
-            {showMineCoin}/<span>{showAllCoin}</span>
+            {
+              comPlayer === true
+                ?
+                <>
+                  {showMineCoin}
+                </>
+                :
+                <>
+                  {showMineCoin} / <span>{showAllCoin}</span>
+                </>
+            }
           </h6>
         </div>
         <div className="bet-number">

@@ -27,15 +27,16 @@ export default function ShopModel(props) {
 
   
   const handleCreateOrder = async (price, currency, amount,) => {
-    axios.post('https://roulette-wheel-game.onrender.com/razorpay/create-order', { amount: price, receipt: `${amount + "Coin Purchase"}` })
+    const  amountAdd=price*100
+    axios.post('http://localhost:5040/razorpay/create-order', { amount: amountAdd, receipt: `${amount + "Coin Purchase"}` })
       .then(response => {
         setOrderDetails({
           ...orderDetails,
-          orderId: response.data.id
+          orderId: response.data?.order?.id       
         })
         var options = {
-          "key_id": "rzp_test_fUcGUlNQ7ATs5v",
-          "key_secret": "Vn1LgZNmbDRoMzZcBvk44ejW",
+          "key": "rzp_test_HQF5r9XZ9o5lVJ",
+          // "key_secret": "scvW6xIBUqOv2e4khSxr3D8k",
           "amount": price,
           "currency": "INR",
           "name": "Test",
@@ -56,6 +57,7 @@ export default function ShopModel(props) {
             "color": "#F37254"
           }
         };
+        
         var rzp1 = new window.Razorpay(options)
         rzp1.open();
       })

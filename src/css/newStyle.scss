@@ -1,0 +1,525 @@
+@import url(https://db.onlinewebfonts.com/c/e7f249e71a563eed9c495835657eb9c2?family=Poetsen+One);
+
+@font-face {
+    font-family: "Poetsen One";
+    src: url("https://db.onlinewebfonts.com/t/e7f249e71a563eed9c495835657eb9c2.eot");
+    src: url("https://db.onlinewebfonts.com/t/e7f249e71a563eed9c495835657eb9c2.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/e7f249e71a563eed9c495835657eb9c2.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/e7f249e71a563eed9c495835657eb9c2.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/e7f249e71a563eed9c495835657eb9c2.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/e7f249e71a563eed9c495835657eb9c2.svg#Poetsen One")format("svg");
+}
+
+* {
+    font-family: "Poetsen One";
+}
+
+.homePage {
+    background: url("../assets/58471.jpg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px 13px;
+    background-size: 100vw 100vh;
+    overflow-x: hidden;
+
+    .headHomePage {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // .head-profile {
+        //     margin: 0px 30px;
+        //     padding: 16px 20px;
+        //     border-radius: 16px;
+        //     background: linear-gradient(120.39deg, #348133 33.76%, #2b9d2b 95.99%);
+        //     // background: linear-gradient(120.39deg, rgba(177, 95, 99, 1) 33.76%, rgb(181 116 119) 95.99%);
+        //     box-shadow: 0px 4px 4px 0px rgba(249, 249, 249, 0.25);
+        //     margin-top: 16px;
+        //     position: relative;
+
+        //     .headbody {
+        //         display: flex;
+        //         justify-content: space-between;
+        //         align-items: center;
+
+        //         .profileImgText {
+        //             display: flex;
+        //             align-items: center;
+        //             justify-content: space-between;
+
+        //             .profileTop {
+        //                 display: flex;
+        //                 align-items: center;
+
+        //                 img {
+        //                     object-fit: cover;
+        //                     width: 45px;
+        //                     background: rgb(255, 255, 255);
+        //                     height: 45px;
+        //                     border-radius: 50%;
+        //                     padding: 2px
+        //                 }
+
+        //                 .profileText {
+        //                     margin-left: 6px;
+        //                     color: white;
+        //                     margin-left: 10px;
+
+        //                     h6 {
+        //                         font-weight: 400;
+        //                         font-size: 17px;
+        //                         margin-bottom: 2px;
+        //                     }
+        //                 }
+        //             }
+        //         }
+
+        //         .headIcon {
+        //             display: flex;
+        //             align-items: center;
+
+        //             .iconImg {
+        //                 background: linear-gradient(270deg, rgba(237, 168, 0, 0.69) 0%, rgba(255, 213, 79, 0.69) 98.23%);
+        //                 border: 0.68px solid rgba(253, 192, 39, 1);
+        //                 width: 34px;
+        //                 height: 34px;
+        //                 cursor: pointer;
+        //                 border-radius: 50%;
+        //                 display: flex;
+        //                 align-items: center;
+        //                 margin: 0px 3px;
+        //                 justify-content: center;
+
+        //                 img {
+        //                     width: 20px;
+        //                     filter: brightness(2);
+        //                     height: 20px;
+        //                 }
+        //             }
+        //         }
+        //     }
+
+
+        // }
+        .leftSidePage {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .avtarShow {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                .imgShow {
+                    width: 50px;
+                    height: 50px;
+                    background-color: #FFFFFF;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 50%;
+                    display: flex;
+                    position: relative;
+                    align-items: flex-end;
+                    justify-content: center;
+
+                    img {
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+
+                span {
+                    color: white;
+                    font-size: 16px;
+                    margin-left: 10px;
+                    font-weight: 400;
+                }
+            }
+
+
+            .coinShowHomePage {
+                max-width: 200px;
+                min-width: 110px;
+                margin-left: 10vh;
+                padding: 5px;
+                justify-content: space-between;
+                border: 0.68px solid #FDC027;
+                background: #0000004D;
+                border-radius: 6px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                .showImg {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    h6 {
+                        color: white;
+                        margin-left: 6px;
+                        margin-bottom: 0px;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+
+                .addIcon {
+                    width: 23px;
+                    border: 0.68px solid #FDC027;
+                    background: #0000004D;
+                    height: 23px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+
+                    span {
+                        color: white;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .walletImg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            .walleteBox {
+                border: 0.68px solid rgba(253, 192, 39, 1);
+                background: linear-gradient(180deg, rgba(255, 179, 0, 0.76) 0%, rgba(255, 213, 79, 0.76) 100%);
+                margin: 0px;
+                border-radius: 40px;
+                width: 100px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                position: relative;
+                justify-content: center;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    left: -10px;
+                    object-fit: cover;
+                }
+
+                h6 {
+                    font-size: 16px;
+                    margin: 0px;
+                    font-weight: 400;
+                    color: white;
+                }
+
+                .addIcon {
+                    width: 28px;
+                    height: 28px;
+                    position: absolute;
+                    display: flex;
+                    right: -10px;
+                    border-radius: 50%;
+                    background: linear-gradient(180deg, #FFB300 0%, #FFD54F 100%);
+                    align-items: center;
+                    justify-content: center;
+
+                    span {
+                        font-size: 20px;
+                        font-weight: 400;
+                        color: white;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .homeBody {
+        margin-top: 5vh;
+
+        .menuShow {
+            box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+            // background: rgba(51, 55, 65, 0.19);
+            background: linear-gradient(#33aa33, #23561e);
+            border-radius: 12px;
+            max-width: 33vh;
+
+            .showMenu {
+                padding: 10px;
+                cursor: pointer;
+                margin: 10px 0px;
+
+                &:hover {
+                    background: linear-gradient(270deg, #b7983ba1 0%, rgb(229 196 91 / 65%) 98.23%);
+
+                    .iconShow {
+                        border: 1px solid rgba(217, 217, 217, 1);
+                        background: linear-gradient(270deg, rgb(235 191 60 / 55%) 0%, rgb(193 156 39 / 68%) 98.23%);
+                        border-radius: 10px;
+
+                        span {
+                            color: white;
+                        }
+                    }
+                }
+
+                .iconShow {
+                    border-bottom: 1px solid #D9D9D9;
+                    padding: 10px;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    span {
+                        color: #F5B909;
+                        font-size: 14px;
+                        font-weight: 400;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        .LogoShowHome {
+            .logoShowImg {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                margin-top: 2vh;
+
+                .logoImg {
+                    width: 200px;
+                    object-fit: cover;
+                    height: 200px;
+                }
+            }
+
+            .GameShowHome {
+                display: flex;
+                align-items: center;
+                margin-top: 6vh;
+                justify-content: center;
+
+                .gameShowBox {
+                    background: url('../assets/newIcon/Rectangle\ 175.png');
+                    background-repeat: no-repeat;
+                    width: 190px;
+                    height: 180px;
+                    background-size: 100% 100%;
+                    display: flex;
+                    margin: 0px 10px;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+                    justify-content: space-evenly;
+
+                    &:hover {
+                        // background: linear-gradient(270deg, #b7983ba1 0%, rgb(229 196 91 / 65%) 98.23%);
+
+                        span {
+                            color: white;
+                        }
+                    }
+
+                    img {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    span {
+                        color: #FFB300;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.withmodel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0000006b;
+    z-index: 5;
+    display: inline-flex;
+    padding-right: 0px !important;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    backdrop-filter: blur(1px);
+    z-index: 10000 !important;
+    padding: 0 30px;
+
+    .withModelHead {
+        margin-top: 6%;
+        width: 88vh;
+        font-family: sans-serif !important;
+        padding: 6px;
+        border-top-right-radius: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: linear-gradient(#33aa33, #23561e);
+        border-top-left-radius: 10px;
+
+        .closeModelIcon {
+            background-color: #FFD54F;
+            border-radius: 50%;
+            position: relative;
+            width: 52px;
+            height: 48px;
+            display: flex;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+
+            .closeModelBg {
+                background-color: #F51925;
+                width: 38px;
+                height: 38px;
+                top: 4px;
+                position: absolute;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                ;
+
+                i {
+                    &::before {
+                        color: white;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        h6 {
+            color: white;
+            text-align: center;
+            font-weight: 100;
+            margin: 0px;
+            padding: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+
+    .withModelbody {
+        height: calc(100vh - 6%);
+        width: 88vh;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+        background-color: white;
+
+        .tableShow {
+            table {
+                width: 100%;
+                margin-top: 10px;
+
+                thead {
+                    background-color: #3F3B3B;
+
+                    th {
+                        color: white;
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+                        padding: 5px;
+                        text-align: center;
+                        font-weight: 100;
+                    }
+                }
+
+                tbody {
+                    tr {
+                        td {
+                            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+                            padding: 6px;
+                            color: #7B6F6F;
+                            text-align: center;
+                            font-weight: 100;
+                            font-size: 13px;
+
+                            &:nth-last-child(1) {
+                                font-weight: 200;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4196078431);
+    z-index: 5;
+    display: inline-flex;
+    padding-right: 0px !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    z-index: 10000 !important;
+    .modelMain{
+        max-width: 70vh;
+        width: 100%;
+        .modelHead {
+            border-radius: 20px 20px 0px 0px;
+            padding: 10px 16px;
+            background: #D9D9D9;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+            .closeIcon {
+                display: flex;
+                background: #F15352;
+                width: 35px;
+                border-radius: 50%;
+                height: 35px;
+                align-items: center;
+                justify-content: center;
+    
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            h6{
+            margin:0px;
+            width: 100%;
+            text-align:center;
+        }
+    }
+.modelBody{
+        background: linear-gradient(#33aa33, #23561e);
+        border-radius: 0px 0px 20px 20px;
+            padding: 10px 16px;
+
+}
+}
+}

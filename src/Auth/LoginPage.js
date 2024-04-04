@@ -6,7 +6,7 @@ import LoadingSvg from '../GamePage/extra/LoadingSvg'
 
 export default function LoginPage(props) {
     const {
-        socketRef, loaderShow, isAuth } = props
+        socketRef, loaderShow, setIsAuth, isAuth } = props
     const [userName, setUserName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -37,11 +37,17 @@ export default function LoginPage(props) {
             }
             return setErorrs({ ...errors });
         } else {
-            socketRef?.current && socketRef?.current?.emit("loginData", {
-                userName: userName,
+
+            const data = {
+                // userName: userName,
                 email: email,
+                type: 2,
                 password: password
-            })
+            }
+            axios.post('http://localhost:5040/user/signupLogin', data)
+                .then(response => {
+                    console.log("response", response)
+                })
             ToastConent("success", "Login Success")
         }
     }
