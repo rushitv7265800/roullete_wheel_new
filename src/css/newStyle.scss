@@ -10,7 +10,7 @@
         url("https://db.onlinewebfonts.com/t/e7f249e71a563eed9c495835657eb9c2.svg#Poetsen One")format("svg");
 }
 
-* {
+body {
     font-family: "Poetsen One";
 }
 
@@ -247,7 +247,7 @@
     }
 
     .homeBody {
-        margin-top: 5vh;
+        margin-top: 2vh;
 
         .menuShow {
             box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
@@ -256,40 +256,35 @@
             border-radius: 12px;
             max-width: 33vh;
 
-            .showMenu {
+            .iconShow {
+                border-bottom: 1px solid #D9D9D9;
+                margin: 10px 0px;
                 padding: 10px;
                 cursor: pointer;
-                margin: 10px 0px;
 
                 &:hover {
-                    background: linear-gradient(270deg, #b7983ba1 0%, rgb(229 196 91 / 65%) 98.23%);
 
-                    .iconShow {
-                        border: 1px solid rgba(217, 217, 217, 1);
-                        background: linear-gradient(270deg, rgb(235 191 60 / 55%) 0%, rgb(193 156 39 / 68%) 98.23%);
-                        border-radius: 10px;
+                    background: linear-gradient(270deg, rgb(235 191 60 / 55%) 0%, rgb(193 156 39 / 68%) 98.23%);
 
-                        span {
-                            color: white;
-                        }
+                    span {
+                        color: white;
                     }
                 }
 
-                .iconShow {
-                    border-bottom: 1px solid #D9D9D9;
-                    padding: 10px;
+                &:nth-last-child(1) {
+                    border-bottom: none;
+                }
 
-                    img {
-                        width: 24px;
-                        height: 24px;
-                    }
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
 
-                    span {
-                        color: #F5B909;
-                        font-size: 14px;
-                        font-weight: 400;
-                        margin-left: 10px;
-                    }
+                span {
+                    color: #F5B909;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-left: 10px;
                 }
             }
         }
@@ -484,9 +479,13 @@
     -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(1px);
     z-index: 10000 !important;
-    .modelMain{
+
+    .modelMain {
         max-width: 70vh;
         width: 100%;
+        min-height: 26vh;
+        height: auto;
+
         .modelHead {
             border-radius: 20px 20px 0px 0px;
             padding: 10px 16px;
@@ -494,32 +493,320 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-    
+
             .closeIcon {
                 display: flex;
                 background: #F15352;
-                width: 35px;
+                width: 40px;
                 border-radius: 50%;
-                height: 35px;
+                cursor: pointer;
+                height: 38px;
                 align-items: center;
                 justify-content: center;
-    
+
                 img {
                     width: 20px;
                     height: 20px;
                 }
             }
-            h6{
-            margin:0px;
-            width: 100%;
-            text-align:center;
+
+            h6 {
+                margin: 0px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .modelBody {
+            background: linear-gradient(#33aa33, #23561e);
+            border-radius: 0px 0px 20px 20px;
+            padding-bottom: 30px !important;
+            padding: 10px 16px;
+            height: auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+
+
         }
     }
-.modelBody{
-        background: linear-gradient(#33aa33, #23561e);
-        border-radius: 0px 0px 20px 20px;
-            padding: 10px 16px;
+}
 
+.withdrwalReq {
+    .modelBody {
+        padding-bottom: 20px;
+
+        h6 {
+            color: white;
+            margin: 0px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+            font-size: 13px;
+            margin-top: 8px;
+            font-size: 15px;
+
+            span {
+                margin-left: 11px;
+                color: #FFD54F;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 12px;
+            align-items: center;
+
+            .modelInput {
+                margin-top: 14px;
+                width: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                input {
+                    border: 1px solid #9F9D9D;
+                    border-radius: 14px;
+                    height: 42px;
+                    font-size: 14px;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+                    width: 50%;
+                    padding: 8px;
+                }
+
+                select {
+                    border-radius: 14px;
+                    height: 42px;
+                    width: 50%;
+                    font-size: 14px;
+                    padding: 8px;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+                    margin-left: 10px;
+                    border: 1px solid #9F9D9D;
+                }
+            }
+
+            button {
+                border: 1px solid #DC6D06;
+                background: rgba(255, 187, 11, 0.8705882353);
+                border-radius: 8px;
+                color: white;
+                font-weight: 100;
+                font-size: 14px;
+                padding: 6px 25px;
+                margin-top: 17px;
+            }
+
+        }
+
+        .paymentShow {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: white;
+            border-radius: 8px;
+            margin-top: 32px;
+
+            img {
+                width: 78px;
+                height: 60px;
+                color: white;
+                object-fit: contain;
+            }
+
+            svg {
+                width: 78px;
+                height: 60px;
+                fill: white;
+                color: white;
+                object-fit: contain;
+            }
+        }
+    }
 }
+
+.settingModel {
+    .modelBody {
+        .settingBox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 8px 14px;
+            margin: 10px 2px;
+            background-color: #e3e2d2;
+            border-radius: 6px;
+
+            i {
+                color: #FFA242;
+                width: 10%;
+
+                &::before {
+                    font-size: 28px;
+                }
+            }
+
+            h6 {
+                font-size: 16px;
+                width: 80%;
+                text-align: center;
+                margin: 0px;
+            }
+
+            input {
+                width: 46px;
+                height: 23px;
+            }
+
+            .form-check {
+                width: 10%;
+            }
+
+            .form-check-input:checked {
+                border-color: #FFA242;
+                background-color: #FFA242;
+            }
+        }
+    }
 }
+
+.promotionModel {
+    .modelBody {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px 16px !important;
+
+        h6 {
+            color: white;
+            background: #00000066;
+            padding: 10px 22px;
+            border-radius: 10px;
+            margin-right: 20px;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 260px;
+        }
+    }
+}
+
+
+.shopNewModel {
+    table {
+        width: 90%;
+        border-collapse: separate;
+        border-spacing: 5px;
+
+        thead {
+            tr {
+                th {
+                    text-align: center;
+                    color: #fbf149;
+                }
+            }
+        }
+
+        tbody {
+            font-family: 'Games', sans-serif;
+
+            tr {
+                background-color: #e3e2d2;
+                margin: 10px 0px;
+
+                td {
+                    text-align: center;
+                    background-color: #e3e2d2;
+                    margin: 10px 0px;
+                    width: 50%;
+
+                    button {
+                        background-color: #10ab74;
+                        color: white;
+                        outline: none;
+                        background-color: #10ab74;
+                        color: white;
+                        border: 1px solid #10ab74;
+                        padding: 1px 0px;
+                        box-shadow: -3px 2px 16px 1px rgba(0, 0, 0, 0.1882352941);
+                        width: 80px;
+                        border-radius: 5px;
+                        outline: 5px solid #11b178;
+                        min-width: 100px;
+
+                        &:active {
+                            position: relative;
+                            top: 1px;
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        border-top-left-radius: 25px;
+                        border-bottom-left-radius: 25px;
+                    }
+
+                    &:nth-last-child(1) {
+                        border-top-right-radius: 25px;
+                        border-bottom-right-radius: 25px;
+                    }
+
+                    .priceShow {
+                        display: flex;
+                        align-items: center;
+                        margin: 5px 0px;
+                        justify-content: center;
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                        }
+
+                        h6 {
+                            margin: 0px;
+                            font-weight: bold;
+                            color: black;
+                            margin-left: 6px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.profileView{
+    .profileEdit{
+        .showImg{
+            background-color: #FFFFFF;
+            position: relative;
+            display: flex;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            i{
+                position: absolute;
+                background-color: #0fa7c5;
+                right: 0;
+                color: white;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                bottom: -2px;
+                &::before{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
 }

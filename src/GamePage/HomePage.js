@@ -7,17 +7,28 @@ import HelpDeskIcon from '../assets/newIcon/help-desk.png'
 import SettingIcon from '../assets/newIcon/gear.png'
 import HelpIcon from '../assets/newIcon/request.png'
 import CoinImg from '../assets/newIcon/CoinImg.png'
+import PromotionIcon from '../assets/newIcon/loudspeaker.png'
 import GameBoxBg from '../assets/newIcon/Rectangle 175.png'
 import Logo from '../assets/logoNew.png'
 import MoneyWithIcon from '../assets/newIcon/money-withdrawal.png'
 import OfflineGame from '../assets/newIcon/computer.png'
 import OnnlineGame from '../assets/newIcon/browser.png'
 import NotificationIcon from '../assets/newIcon/notificationIcon.png'
+import ShopModelImg from '../assets/newIcon/store.png'
 import WithdrwalStatementModel from '../Model/WithdrwalStatementModel'
 import WithdrwalRequest from '../GameMain/WithdrwalRequest'
+import SettingModel from '../GameMain/SettingModel'
+import PromotionModelModel from '../GameMain/PromotionModel'
+import AddmoneyModel from '../GameMain/Addmoney'
+import ProfileView from '../GameMain/ProfileView'
 
 export default function HomePage() {
     const [withdrwalStatemenOpen,setWithdrwalStatemenOpen]=useState(false)
+    const [withdrwalRequestOpen,setWithdrwalRequestOpen]=useState(false)
+    const [settingOpen,setSettingOpen]=useState(false)
+    const [promotionModelOpen,setPromotionModelOpen]=useState(false)
+    const [addmoneyModelOpen,setAddmoneyModelOpen]=useState(false)
+
     return (
         <>
             <div className="homePage">
@@ -85,43 +96,39 @@ export default function HomePage() {
                     <div className='row'>
                         <div className='col-4 p-0'>
                             <div className='menuShow'>
-                                <div className="showMenu">
                                     <div className='iconShow'>
                                         <img src={GameStatementIcon} />
                                         <span>Records</span>
-                                    </div>
                                 </div>
-                                <div className="showMenu">
+                                    <div className='iconShow' onClick={()=>setAddmoneyModelOpen(!addmoneyModelOpen)}>
+                                        <img src={ShopModelImg} />
+                                        <span>Shop</span>
+                                </div>
                                     <div className='iconShow' onClick={()=>setWithdrwalStatemenOpen(!withdrwalStatemenOpen)}>
                                         <img src={BankStatementIcon} />
                                         <span>Bank Statement</span>
-                                    </div>
 
                                 </div>
-                                <div className="showMenu">
-                                    <div className='iconShow' >
+                                    <div className='iconShow' onClick={()=>setWithdrwalRequestOpen(!withdrwalRequestOpen)}>
                                         <img src={MoneyWithIcon} />
-                                        <span>Withdrawal Req uest</span>
-                                    </div>
+                                        <span>Withdrawal Request</span>
 
                                 </div>
-                                <div className="showMenu">
-                                    <div className='iconShow'>
+                                    <div className='iconShow' onClick={()=>setSettingOpen(!settingOpen)}>
                                         <img src={SettingIcon} />
                                         <span>Setting</span>
-                                    </div>
                                 </div>
-                                <div className="showMenu">
                                     <div className='iconShow'>
                                         <img src={HelpDeskIcon} />
                                         <span>Support</span>
-                                    </div>
                                 </div>
-                                <div className="showMenu">
+                                    <div className='iconShow' onClick={()=>setPromotionModelOpen(!promotionModelOpen)}>
+                                        <img src={PromotionIcon} />
+                                        <span>Promotion</span>
+                                </div>
                                     <div className='iconShow'>
                                         <img src={HelpIcon} />
                                         <span>Help</span>
-                                    </div>
                                 </div>
 
                             </div>
@@ -151,7 +158,13 @@ export default function HomePage() {
 
             </div >
             <WithdrwalStatementModel open={withdrwalStatemenOpen} setOpen={setWithdrwalStatemenOpen}/>
-            <WithdrwalRequest/>
+            <WithdrwalRequest open={withdrwalRequestOpen} setOpen={setWithdrwalRequestOpen}/>
+            <SettingModel open={settingOpen} setOpen={setSettingOpen}/>
+            <AddmoneyModel open={addmoneyModelOpen} setOpen={setAddmoneyModelOpen}/>
+            <PromotionModelModel open={promotionModelOpen} setOpen={setPromotionModelOpen}/>
+            <AddmoneyModel open={addmoneyModelOpen} setOpen={setAddmoneyModelOpen}/>
+            <ProfileView open={addmoneyModelOpen} setOpen={setAddmoneyModelOpen}/>
+
         </>
     )
 }
