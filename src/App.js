@@ -32,15 +32,14 @@ function App() {
   const [loaderShow, setLoaderShow] = useState(loaderShowGet?.length ? loaderShowGet : false)
   const navigate = useNavigate()
 
-  useEffect(() => {
-    console.log("isAuth", isAuth);
-    console.log("isAuth", loaderShow);
-    if (isAuth === true && loaderShow === false) {
-
-      const progressBars = document.querySelectorAll('.progress_bar_item');
-      progressBars.forEach(progressBar => animateProgressBar(progressBar));
-    }
-  }, [isAuth, loaderShow]);
+//  useEffect(() => {
+  //  console.log("isAuth", isAuth);
+//    console.log("isAuth", loaderShow);
+//    if (isAuth === true && loaderShow === false) {
+//    const progressBars = document.querySelectorAll('.progress_bar_item');
+//      progressBars.forEach(progressBar => animateProgressBar(progressBar));
+//    }
+//  }, [isAuth, loaderShow]);//
 
   const animateProgressBar = (progressBar) => {
     const speed = 30;
