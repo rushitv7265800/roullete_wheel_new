@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import WheeSpin from '../../GameMain/WheeSpin'
-import UsersIcon from '../../assets/newIcon/Avatar.png'
+import UsersIcon from '../../assets/UsersIcon.png'
 import audioPath from "../../assets/audio/coinsSound.mp3";
 import SpinButton from '../../assets/SpinButton.png'
 import Frame from '../../GameMain/Frame';
@@ -8,7 +8,7 @@ import CoinBtn from '../../GameMain/CoinButton'
 import Coin50 from '../../assets/coinButton/lightBlueCoin.png'
 import Coin100 from '../../assets/coinButton/pinkCoin.png'
 import Coin200 from '../../assets/coinButton/darkBlueCoin.png'
-import AvtarImg from '../../assets/Avtar.png'
+import AvtarImg from '../../assets/newIcon/Avatar.png'
 import Coin400 from '../../assets/coinButton/blueCoin.png'
 import Coin800 from '../../assets/coinButton/darkRedCoin.png'
 import Coin1000 from '../../assets/coinButton/redCoin.png'
