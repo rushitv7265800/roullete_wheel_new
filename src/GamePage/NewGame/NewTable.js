@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import WheeSpin from '../../GameMain/WheeSpin'
-import UsersIcon from '../../assets/UsersIcon.png'
+import UsersIcon from '../../assets/newIcon/Avatar.png'
 import audioPath from "../../assets/audio/coinsSound.mp3";
 import SpinButton from '../../assets/SpinButton.png'
 import Frame from '../../GameMain/Frame';

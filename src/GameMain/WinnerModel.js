@@ -53,14 +53,14 @@ export default function WinnerModel({
       <div className="winnerModel" style={{ display: `${open === true ? "block" : "none"}` }}>
         <div className="winnerBg"></div>
         <div className="winnerModel-bg">
-          <div className="model">
-            <div className="model-head">
+          <div className="modelWin">
+            <div className="model-headWin">
               <img src={WinCoin} />
               {/* <div className="time-count">
                            {seconds}
                 </div> */}
             </div>
-            <div className="model-body">
+            <div className="model-bodyWin">
               <div className="winner-fram" style={{ backgroundImage: `url(${resultShow?.color == "red" ? RedChip : resultShow?.color == "black" ? BlackChip : resultShow?.color == "green" ? GreenChip : GreenChip})` }}>
                 <h6>
                   <span style={{ color: `${resultShow?.color == "red" ? "red" : resultShow?.color == "black" ? "black" : resultShow?.color == "green" ? "green" : "green"}` }}>{resultShow?.no}</span>

@@ -31,77 +31,77 @@ export default function WithdrwalStatementModel(props) {
                                     <tbody>
                                         <tr>
                                             <td>01 Nov 2022 12:41:49</td>
-                                            <td>897568756787568767</td>
+                                            <td>897568756</td>
                                             <td>- ₹ 1000</td>
                                             <td>Bank Card</td>
                                             <td style={{ color: "#4783B0" }}>Processing</td>
                                         </tr>
                                         <tr>
                                             <td>01 Nov 2022 12:41:49</td>
-                                            <td>897568756787568767</td>
+                                            <td>897568756</td>
                                             <td>- ₹ 1000</td>
                                             <td>Bank Card</td>
                                             <td style={{ color: "#4783B0" }}>Processing</td>
                                         </tr>
                                         <tr>
                                             <td>01 Nov 2022 12:41:49</td>
-                                            <td>897568756787568767</td>
+                                            <td>897568756</td>
                                             <td>- ₹ 1000</td>
                                             <td>Bank Card</td>
                                             <td style={{ color: "#56B047" }}>Credited</td>
                                         </tr>
                                         <tr>
                                             <td>01 Nov 2022 12:41:49</td>
-                                            <td>897568756787568767</td>
+                                            <td>897568756</td>
                                             <td>- ₹ 1000</td>
                                             <td>Bank Card</td>
                                             <td style={{ color: "#56B047" }}>Credited</td>
                                         </tr>
                                         <tr>
                                             <td>01 Nov 2022 12:41:49</td>
-                                            <td>897568756787568767</td>
+                                            <td>897568756</td>
                                             <td>- ₹ 1000</td>
                                             <td>Bank Card</td>
                                             <td style={{ color: "#56B047" }}>Credited</td>
                                         </tr>
                                         <tr>
                                             <td>01 Nov 2022 12:41:49</td>
-                                            <td>897568756787568767</td>
+                                            <td>897568756</td>
                                             <td>- ₹ 1000</td>
                                             <td>Bank Card</td>
                                             <td style={{ color: "#56B047" }}>Credited</td>
                                         </tr>
                                         <tr>
                                             <td>01 Nov 2022 12:41:49</td>
-                                            <td>897568756787568767</td>
+                                            <td>897568756</td>
                                             <td>- ₹ 1000</td>
                                             <td>Bank Card</td>
                                             <td style={{ color: "#56B047" }}>Credited</td>
                                         </tr>
                                         <tr>
                                             <td>01 Nov 2022 12:41:49</td>
-                                            <td>897568756787568767</td>
+                                            <td>897568756</td>
                                             <td>- ₹ 1000</td>
                                             <td>Bank Card</td>
                                             <td style={{ color: "#56B047" }}>Credited</td>
                                         </tr>
                                         <tr>
                                             <td>01 Nov 2022 12:41:49</td>
-                                            <td>897568756787568767</td>
+                                            <td>897568756</td>
                                             <td>- ₹ 1000</td>
                                             <td>Bank Card</td>
                                             <td style={{ color: "#4783B0" }}>Processing</td>
                                         </tr>
                                         <tr>
                                             <td>01 Nov 2022 12:41:49</td>
-                                            <td>897568756787568767</td>
+                                            <td>897568756</td>
                                             <td>- ₹ 1000</td>
                                             <td>Bank Card</td>
                                             <td style={{ color: "#4783B0" }}>Processing</td>
                                         </tr>
                                         <tr>
                                             <td>01 Nov 2022 12:41:49</td>
-                                            <td>897568756787568767</td>
+                                            <td>897568756</td>
                                             <td>- ₹ 1000</td>
                                             <td>Bank Card</td>
                                             <td style={{ color: "#4783B0" }}>Processing</td>

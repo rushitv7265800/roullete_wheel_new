@@ -472,8 +472,8 @@
     transform: rotate(90deg);
 
     .buttonMetnuTop {
-      width: 200px;
       height: 200px;
+      width: 156px  ;
       position: absolute;
       right: 3vh;
       top: 50vh;
@@ -886,6 +886,9 @@
   }
 
   .winnerModel {
+    transform: rotate(90deg);
+    width: 100vh;
+    top: 0vh;
     .winnerModel-bg {
       height: 200px !important;
       background-size: 100% 200px !important;
@@ -895,14 +898,14 @@
       right: unset !important;
       width: 50vh;
 
-      .model-head {
+      .model-headWin {
         img {
           margin-top: -24px;
           width: 250px;
           height: 100px;
         }
 
-        .model-body {
+        .model-bodyWin {
           margin-top: -33px;
 
           .winner-fram {
@@ -928,29 +931,77 @@
       }
     }
   }
-  .comPlayer{
-    .userDetails{
-      top: 56vh;
-      right: 10px;
+
+  .comPlayer {
+    .userDetails {
+      top: calc(51vh - 2px);
+      right: 27vh;
       padding: 1px 8px;
-      height: 54px;
-      .user-avtar{
-        img{
-          width: 38px;
-    border-radius: 50%;
-    height: 38px;
+      height: 50px;
+
+      .user-avtar {
+        img {
+          width: 34px;
+          border: 2px solid #d2d931;
+          border-radius: 50%;
+          height: 34px;
         }
       }
-      .user-balance{
+
+      .user-balance {
         margin-left: 6px;
-        h6{
-          margin-bottom: 2px;
-    font-size: 11px;
+
+        h6 {
+          margin-bottom: 3px;
+          font-size: 10px;
         }
-        h5{
-          font-size: 13px;
+
+        h5 {
+          font-size: 12px;
         }
       }
+    }
+
+    .tableHead {
+      padding-top: 0px !important;
+    }
+
+    .new-table {
+      .tableDataShow {
+        .bet-head {
+          .showBetHed {
+            .showBetData {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+
+    .backButton {
+      position: absolute;
+      z-index: 111;
+      top: 52vh;
+      cursor: pointer;
+      border-radius: 50px;
+      right: 10vh;
+      left: unset;
+      transform: rotate(180deg);
+
+      img {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    .spin-button {
+      right: 33% !important;
+      top: 31%;
+      background-size: 46px 46px;
+      width: 46px;
+      height: 46px;
     }
   }
 }

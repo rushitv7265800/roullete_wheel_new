@@ -260,7 +260,9 @@ body {
             background: linear-gradient(#33aa33, #257a1c);
             height: calc(100vh - 73px);
             max-width: 33vh;
-
+            overflow-y: scroll;
+            height: calc(100vh - 73px);
+            max-height: calc(100vh - 73px);
             .iconShow {
                 border-bottom: 1px solid #D9D9D9;
                 padding: 14px 10px;
@@ -977,7 +979,7 @@ body {
                 }
 
             }
-            
+
             .coinShowHomePage {
                 min-width: 88px;
                 margin-right: 8vh;
@@ -1135,7 +1137,7 @@ body {
             max-height: 43vh;
             width: 98vh;
             table{
-                width: 94%;
+    width: 92% !important;
                 td{
                     padding: 2px;
                 }

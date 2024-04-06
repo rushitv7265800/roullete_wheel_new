@@ -9,7 +9,7 @@ import ShopIcon from '../assets/shop (1).png'
 import ExitGameIcon from '../assets/ExitGame.png'
 import { ReactComponent as SoundMute } from '../assets/soundMute.svg'
 import { ReactComponent as SoundUp } from '../assets/soundUp.svg'
-
+import {useNavigate} from 'react-router-dom'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import 'react-lazy-load-image-component/src/effects/black-and-white.css';
@@ -27,6 +27,7 @@ export default function GameTable(props) {
 
   const [resultShow, setResultShow] = useState(resultObjDeflut);
   const [shopModelShow, setShopModelShow] = useState(false)
+  const navigate=useNavigate()
   const [soundOn, setSoundOn] = useState(getSoundData?.length === 0 ? true : getSoundData)
   const [resultOld, setResultOld] = useState(resultObjDeflut);
   const {
@@ -229,9 +230,9 @@ export default function GameTable(props) {
     <>
       <div className="buttonMetnuTop">
         <div className="buttonBox">
-          <button className="buttonIcon" onClick={() => setShopModelShow(!shopModelShow)}><img src={ShopIcon} /></button>
+          {/* <button className="buttonIcon" onClick={() => setShopModelShow(!shopModelShow)}><img src={ShopIcon} /></button> */}
           <button className="buttonIcon" onClick={handleSoundOn}>{soundOn ? <SoundUp /> : <SoundMute />}</button>
-          <button className="buttonIcon "><img src={ExitGameIcon} /></button>
+          <button className="buttonIcon " onClick={()=>navigate("/home")}><img src={ExitGameIcon} /></button>
         </div>
       </div>
       <NewTable

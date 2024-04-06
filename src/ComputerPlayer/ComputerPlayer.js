@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import AvtarImg from '../assets/Avtar.png'
+import AvtarImg from '../assets/newIcon/Avatar.png'
 import UsersIcon from '../assets/UsersIcon.png'
 import WheeSpin from '../GameMain/WheeSpin'
 import Frame from '../GameMain/Frame'
@@ -8,7 +8,8 @@ import Coin50 from '../assets/coinButton/lightBlueCoin.png'
 import Coin100 from '../assets/coinButton/pinkCoin.png'
 import Coin400 from '../assets/coinButton/blueCoin.png'
 import Coin800 from '../assets/coinButton/darkRedCoin.png'
-import BackButton from '../assets/newIcon/back.png'
+import {useNavigate} from 'react-router-dom'
+import BackButton from '../assets/newIcon/left-arrow.png'
 import Coin1000 from '../assets/coinButton/redCoin.png'
 import Coin200 from '../assets/coinButton/darkBlueCoin.png'
 import { ToastConent } from '../GameMain/ToastConent'
@@ -88,6 +89,7 @@ export default function ComputerPlayer() {
   const [selectedFrames, setSelectedFrames] = useState(getselectedFrames)
   const [winModelShow, setWinModelShow] = useState();
   const [winnerCoin, setWinnerCoin] = useState(0)
+const navigate=useNavigate()
   const [addBitCheck, setAddBitCheck] = useState(false)
   const [winnerFrame, setWinnerFrame] = useState([])
   const [selecetedCoin, setSelectedCoin] = useState(50)
@@ -576,7 +578,7 @@ export default function ComputerPlayer() {
         </div>
        
       </div>
-      <div className='backButton'>
+      <div className='backButton' onClick={()=>navigate("/home")}>
           <img src={BackButton}/>
         </div>
         <div className='new-table'>
