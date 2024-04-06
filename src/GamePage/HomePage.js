@@ -43,7 +43,10 @@ export default function HomePage(props) {
             setLoader(true)
         }
     }, [getLoader])
-
+const logOutHandleClick=()=>{
+    localStorage.clear()
+    navigate("/login")
+}
     useEffect(() => {
         if (loader === true) {
             const progressBars = document.querySelectorAll('.progress_bar_item');
@@ -153,7 +156,7 @@ export default function HomePage(props) {
                                                 <img src={HelpIcon} />
                                                 <span>Help</span>
                                             </div>
-                                            <div className='iconShow'>
+                                            <div className='iconShow' onClick={()=>logOutHandleClick()}>
                                                 <img src={LogOutImage} />
                                                 <span>Log Out</span>
                                             </div>
@@ -196,7 +199,7 @@ export default function HomePage(props) {
                                                 <img src={HelpIcon} />
                                                 <span>Help</span>
                                             </div>
-                                            <div className='iconShow'>
+                                            <div className='iconShow' onClick={()=>logOutHandleClick()}>
                                                 <img src={LogOutImage} />
                                                 <span>Log Out</span>
                                             </div>

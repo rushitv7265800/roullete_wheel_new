@@ -17,7 +17,7 @@ import OnePlayer from "./ComputerPlayer/ComputerPlayer";
 import HomePage from "./GamePage/HomePage";
 
 // export const baseURL = "https://roulette-wheel-game.onrender.com/";
-export const baseURL = "http://localhost:5040/";
+export const baseURL = "https://roulette-wheel-game.onrender.com/";
 
 export const key = "vguikkOUno8Xcfvjhkiyb06aIKrejZ9R4h";
 const queryParams = new URLSearchParams(window.location.search);

@@ -675,12 +675,17 @@ body {
 }
 
 .settingModel {
+    .modelMain{
+        overflow: hidden;
+    }
     .modelBody {
+        overflow: hidden !important;
         .settingBox {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
+            overflow: hidden;
             padding: 8px 14px;
             margin: 10px 2px;
             background-color: #e3e2d2;
@@ -830,6 +835,9 @@ body {
 }
 
 .profileView {
+    .modelMain{
+        max-width: 74vh;
+    }
     .profileEdit {
         .profileDetialsShow {
             display: flex;

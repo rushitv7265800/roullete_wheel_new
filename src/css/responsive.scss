@@ -884,9 +884,12 @@
   .winnerBg {
     width: 100vh;
   }
-
+.comPlayer{
+  .winnerModel{
+    transform: rotate(90deg) !important;
+  }
+}
   .winnerModel {
-    transform: rotate(90deg);
     width: 100vh;
     top: 0vh;
     .winnerModel-bg {

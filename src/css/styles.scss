@@ -1372,6 +1372,8 @@ body {
           color: #b48d65;
           margin: 0px;
           text-align: center;
+          font-weight: 100;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1379,6 +1381,8 @@ body {
 
           span {
             font-size: 20px;
+            font-weight: 100;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
             margin-top: 2px;
             font-weight: 600;
             margin-left: 0px;
@@ -1391,12 +1395,16 @@ body {
         color: white;
         display: flex;
         font-size: 17px;
+        font-weight: 600;
+
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
         align-items: center;
         justify-content: center;
 
         span {
           color: #f2f236;
           margin-left: 5px;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
           font-weight: 600;
         }
       }
