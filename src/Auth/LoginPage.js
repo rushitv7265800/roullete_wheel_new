@@ -1,14 +1,14 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { baseURL } from '../App'
+import { useNavigate } from "react-router-dom";
 import { ToastConent } from '../GameMain/ToastConent'
 import LoadingSvg from '../GamePage/extra/LoadingSvg'
 
 export default function LoginPage(props) {
-    const {
-        socketRef, loaderShow, setIsAuth, isAuth } = props
     const [userName, setUserName] = useState("")
     const [email, setEmail] = useState("")
+    const navigate = useNavigate()
     const [password, setPassword] = useState("")
     const [errors, setErorrs] = useState(
         {
@@ -17,6 +17,9 @@ export default function LoginPage(props) {
             password: ""
         }
     )
+    useEffect(() => {
+        localStorage.clear()
+    }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -44,11 +47,14 @@ export default function LoginPage(props) {
                 type: 2,
                 password: password
             }
-            axios.post('http://localhost:5040/user/signupLogin', data)
+            axios.post('https://roulette-wheel-game.onrender.com/user/signupLogin', data)
                 .then(response => {
-                    console.log("response", response)
+                    localStorage.setItem("loginData", JSON.stringify(response.data))
+                    localStorage.setItem("loader", true)
+                    setTimeout(() => {
+                        navigate('/home')
+                    }, 600);
                 })
-            ToastConent("success", "Login Success")
         }
     }
 
@@ -59,15 +65,8 @@ export default function LoginPage(props) {
         }
     }, [errors])
 
-    useEffect(() => {
-        sessionStorage.removeItem("isAuth")
-        sessionStorage.removeItem("loader")
-    }, [])
-
     return (
         <>
-            {
-                isAuth === false ?
                     <div className='login-page' >
                         <form>
                             <div class="form-structor ">
@@ -122,9 +121,6 @@ export default function LoginPage(props) {
                             </div>
                         </form>
                     </div>
-                    :
-                    <LoadingSvg />
-            }
         </>
     )
 }

@@ -8,6 +8,7 @@ import Coin50 from '../assets/coinButton/lightBlueCoin.png'
 import Coin100 from '../assets/coinButton/pinkCoin.png'
 import Coin400 from '../assets/coinButton/blueCoin.png'
 import Coin800 from '../assets/coinButton/darkRedCoin.png'
+import BackButton from '../assets/newIcon/back.png'
 import Coin1000 from '../assets/coinButton/redCoin.png'
 import Coin200 from '../assets/coinButton/darkBlueCoin.png'
 import { ToastConent } from '../GameMain/ToastConent'
@@ -564,6 +565,7 @@ export default function ComputerPlayer() {
 
   return (
     <div className='comPlayer'>
+      <div className="game-content">
       <div className="userDetails">
         <div className="user-avtar">
           <img src={AvtarImg} />
@@ -572,8 +574,11 @@ export default function ComputerPlayer() {
           <h6>{"Jhone Doee"}</h6>
           <h5>{userData?.diamond ? convertToShortForm(parseInt(userData?.diamond)) : "0"}</h5>
         </div>
+       
       </div>
-      <div className="game-content">
+      <div className='backButton'>
+          <img src={BackButton}/>
+        </div>
         <div className='new-table'>
           <div className='result-show'>
             <div className='result-head'>

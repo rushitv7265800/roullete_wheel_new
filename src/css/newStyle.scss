@@ -19,13 +19,16 @@ body {
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
-    padding: 20px 13px;
+    padding: 0px 13px;
     background-size: 100vw 100vh;
     overflow-x: hidden;
 
     .headHomePage {
         position: relative;
         display: flex;
+        background: linear-gradient(#33aa33, #4b8e44);
+        border-bottom: 1px solid #33aa33;
+        padding: 11px 16px;
         justify-content: space-between;
         align-items: center;
 
@@ -141,10 +144,16 @@ body {
             }
 
 
+        }
+
+        .coinBoxHomePage {
+            display: flex;
+            justify-content: flex-end;
+    align-items: center;
             .coinShowHomePage {
                 max-width: 200px;
                 min-width: 110px;
-                margin-left: 10vh;
+                margin-left: 26px;
                 padding: 5px;
                 justify-content: space-between;
                 border: 0.68px solid #FDC027;
@@ -188,86 +197,83 @@ body {
                     }
                 }
             }
-        }
-
-        .walletImg {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-
-            .walleteBox {
-                border: 0.68px solid rgba(253, 192, 39, 1);
-                background: linear-gradient(180deg, rgba(255, 179, 0, 0.76) 0%, rgba(255, 213, 79, 0.76) 100%);
-                margin: 0px;
-                border-radius: 40px;
-                width: 100px;
-                height: 36px;
+            .walletImg {
                 display: flex;
                 align-items: center;
-                position: relative;
                 justify-content: center;
+                position: relative;
 
-                img {
-                    width: 24px;
-                    height: 24px;
-                    position: absolute;
-                    left: -10px;
-                    object-fit: cover;
-                }
-
-                h6 {
-                    font-size: 16px;
+                .walleteBox {
+                    border: 0.68px solid rgba(253, 192, 39, 1);
+                    background: linear-gradient(180deg, rgba(255, 179, 0, 0.76) 0%, rgba(255, 213, 79, 0.76) 100%);
                     margin: 0px;
-                    font-weight: 400;
-                    color: white;
-                }
-
-                .addIcon {
-                    width: 28px;
-                    height: 28px;
-                    position: absolute;
+                    border-radius: 40px;
+                    width: 100px;
+                    height: 36px;
                     display: flex;
-                    right: -10px;
-                    border-radius: 50%;
-                    background: linear-gradient(180deg, #FFB300 0%, #FFD54F 100%);
                     align-items: center;
+                    position: relative;
                     justify-content: center;
 
-                    span {
-                        font-size: 20px;
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        position: absolute;
+                        left: -10px;
+                        object-fit: cover;
+                    }
+
+                    h6 {
+                        font-size: 16px;
+                        margin: 0px;
                         font-weight: 400;
                         color: white;
                     }
-                }
-            }
 
+                    .addIcon {
+                        width: 28px;
+                        height: 28px;
+                        position: absolute;
+                        display: flex;
+                        right: -10px;
+                        border-radius: 50%;
+                        background: linear-gradient(180deg, #FFB300 0%, #FFD54F 100%);
+                        align-items: center;
+                        justify-content: center;
+
+                        span {
+                            font-size: 20px;
+                            font-weight: 400;
+                            color: white;
+                        }
+                    }
+                }
+
+            }
         }
 
     }
 
     .homeBody {
-        margin-top: 2vh;
-
         .menuShow {
             box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
-            // background: rgba(51, 55, 65, 0.19);
-            background: linear-gradient(#33aa33, #23561e);
-            border-radius: 12px;
+            background: linear-gradient(#33aa33, #257a1c);
+            height: calc(100vh - 73px);
             max-width: 33vh;
 
             .iconShow {
                 border-bottom: 1px solid #D9D9D9;
-                margin: 10px 0px;
-                padding: 10px;
+                padding: 14px 10px;
                 cursor: pointer;
+                margin-top: 0px;
 
                 &:hover {
 
                     background: linear-gradient(270deg, rgb(235 191 60 / 55%) 0%, rgb(193 156 39 / 68%) 98.23%);
 
                     span {
-                        color: white;
+                        color: #F5B909;
+
                     }
                 }
 
@@ -281,12 +287,18 @@ body {
                 }
 
                 span {
-                    color: #F5B909;
+                    color: white;
                     font-size: 14px;
                     font-weight: 400;
                     margin-left: 10px;
                 }
             }
+        }
+
+        .logoShow {
+            align-items: center;
+            justify-content: center;
+            display: flex;
         }
 
         .LogoShowHome {
@@ -295,12 +307,25 @@ body {
                 width: 100%;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
                 margin-top: 2vh;
 
                 .logoImg {
                     width: 200px;
+                    border: 6px solid #ffc107;
+                    border-radius: 50%;
+                    outline: 1px solid #ffc107;
                     object-fit: cover;
                     height: 200px;
+                }
+
+                h6 {
+                    color: white;
+                    font-size: 20px;
+                    margin-top: 18px;
+                    text-decoration: underline;
+                    text-underline-position: under;
+
                 }
             }
 
@@ -311,34 +336,62 @@ body {
                 justify-content: center;
 
                 .gameShowBox {
-                    background: url('../assets/newIcon/Rectangle\ 175.png');
-                    background-repeat: no-repeat;
-                    width: 190px;
-                    height: 180px;
-                    background-size: 100% 100%;
+                    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);
+                    background: linear-gradient(#33aa33, #257a1c);
+                    border-radius: 12px;
+                    color: white;
+                    border: 1px solid #F5B909;
+                    outline: 3px solid #F5B909;
+                    width: 136px;
+                    height: 130px;
                     display: flex;
-                    margin: 0px 10px;
+                    margin: 0px 13px;
                     flex-direction: column;
                     align-items: center;
                     cursor: pointer;
                     justify-content: space-evenly;
 
-                    &:hover {
-                        // background: linear-gradient(270deg, #b7983ba1 0%, rgb(229 196 91 / 65%) 98.23%);
+                    &:focus {
+                        background: linear-gradient(#4bb04b, #2e8624);
+                        border-color: white;
+                        outline-color: white;
 
                         span {
-                            color: white;
+                            color: #FFB300;
+
+                        }
+                    }
+
+                    &:hover {
+                        background: linear-gradient(#4bb04b, #2e8624);
+                        border-color: white;
+                        outline-color: white;
+
+                        span {
+                            color: #FFB300;
+
+                        }
+                    }
+
+                    &:active {
+                        background: linear-gradient(#4bb04b, #2e8624);
+                        border-color: white;
+                        outline-color: white;
+
+                        span {
+                            color: #FFB300;
+
                         }
                     }
 
                     img {
-                        width: 60px;
-                        height: 60px;
+                        width: 46px;
+                        height: 46px
                     }
 
                     span {
-                        color: #FFB300;
-                        font-size: 16px;
+                        color: white;
+                        font-size: 15px
                     }
                 }
             }
@@ -437,8 +490,8 @@ body {
                         color: white;
                         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
                         padding: 5px;
+                        font-weight: 500;
                         text-align: center;
-                        font-weight: 100;
                     }
                 }
 
@@ -449,12 +502,8 @@ body {
                             padding: 6px;
                             color: #7B6F6F;
                             text-align: center;
-                            font-weight: 100;
+                            font-weight: 500;
                             font-size: 13px;
-
-                            &:nth-last-child(1) {
-                                font-weight: 200;
-                            }
                         }
                     }
                 }
@@ -589,7 +638,7 @@ body {
                 background: rgba(255, 187, 11, 0.8705882353);
                 border-radius: 8px;
                 color: white;
-                font-weight: 100;
+                font-weight: 600;
                 font-size: 14px;
                 padding: 6px 25px;
                 margin-top: 17px;
@@ -722,17 +771,19 @@ body {
                     width: 50%;
 
                     button {
-                        background-color: #10ab74;
                         color: white;
                         outline: none;
-                        background-color: #10ab74;
+                        background-color: #3da0c3;
                         color: white;
-                        border: 1px solid #10ab74;
+                        font-weight: 600;
+                        border: 1px solid #3da0c3;
+                        outline: 2px solid #3da0c3;
+                        font-size: 14px;
+                        padding: 2px 6px;
                         padding: 1px 0px;
                         box-shadow: -3px 2px 16px 1px rgba(0, 0, 0, 0.1882352941);
                         width: 80px;
                         border-radius: 5px;
-                        outline: 5px solid #11b178;
                         min-width: 100px;
 
                         &:active {
@@ -925,33 +976,33 @@ body {
                     }
                 }
 
-                .coinShowHomePage {
-                    min-width: 88px;
+            }
+            
+            .coinShowHomePage {
+                min-width: 88px;
+                margin-right: 8vh;
 
-                    .showImg {
-                        img {
-                            width: 16px;
-                            height: 16px;
-                        }
-
-                        h6 {
-                            margin-left: 6px;
-                            margin-bottom: 0px;
-                            font-size: 12px;
-
-                        }
-                    }
-
-                    .addIcon {
+                .showImg {
+                    img {
                         width: 16px;
                         height: 16px;
                     }
 
-                }
-            }
+                    h6 {
+                        margin-left: 6px;
+                        margin-bottom: 0px;
+                        font-size: 12px;
 
+                    }
+                }
+
+                .addIcon {
+                    width: 16px;
+                    height: 16px;
+                }
+
+            }
             .walletImg {
-                margin-right: 10vh;
 
                 .walleteBox {
                     img {
@@ -974,32 +1025,28 @@ body {
         }
 
         .homeBody {
-            margin-top: 1vh;
-
             .menuShow {
-                max-width: 25vh;
-                margin-top: 25px;
-
+                max-width: 24vh;
                 .iconShow {
-                    margin: 8px 0px;
-                    padding: 11px;
-
-                    &:nth-child(5) {
-                        display: none !important;
+                    padding:9% 5%;
+                    &:nth-last-child(1) {
+                        border-bottom: 1px solid white !important;
                     }
-
-                    &:nth-child(6) {
-                        display: none !important;
-                    }
-
-                    &:nth-child(7) {
-                        display: none !important;
-                    }
-
-                    &:nth-child(8) {
-                        display: none !important;
-                    }
-
+&:nth-child(6){
+    display:none;
+}
+&:nth-child(7){
+    display:none;
+}
+&:nth-child(8){
+    display:none;
+}
+&:nth-child(9){
+    display:none;
+}
+&:nth-child(10){
+    display:none;
+}
                     img {
                         width: 20px;
                         height: 20px;
@@ -1014,24 +1061,38 @@ body {
             .mobileView {
                 display: block !important;
             }
-
+.logoShow{
+    align-items: flex-start;
+}
             .LogoShowHome {
+                margin-top: 0vh;
+                margin-right: 5vh;
                 .logoShowImg {
-                    margin-top: 0vh;
-
+                    
+                    margin-top: 3vh;
                     .logoImg {
-                        width: 150px;
-                        height: 150px;
+                        width: 100px;
+                        height: 100px;
+                        border: 3px solid #ffc107;
+    border-radius: 50%;
+    outline: 1px solid #ffc107;
+
+                    }
+                    h6{
+                        font-size: 15px;
+                        margin-top: 13px;
+                    
                     }
                 }
 
                 .GameShowHome {
-                    margin-top: 0vh;
+                    margin-top: 4vh;
 
                     .gameShowBox {
-                        width: 140px;
-                        height: 116px;
-
+                        width: 88px;
+                        margin: 0px 10px;
+                        height: 88px;
+                        outline: 2px solid #F5B909;
                         span {
                             font-size: 12px;
                         }
@@ -1048,27 +1109,40 @@ body {
         }
     }
 
-    .withmodel{
+    .withmodel {
         transform: rotate(90deg);
         width: 100vh;
-        .withModelHead{
-            .closeModelIcon{
+
+        .withModelHead {
+            width: 98vh;
+            .closeModelIcon {
                 width: 48px;
                 height: 46px;
-                .closeModelBg{
+
+                .closeModelBg {
                     width: 36px;
                     height: 36px;
                 }
             }
-            h6{
+
+            h6 {
                 font-weight: 400;
             }
         }
-        .withModelbody{
+
+        .withModelbody {
             overflow: scroll;
             max-height: 43vh;
+            width: 98vh;
+            table{
+                width: 94%;
+                td{
+                    padding: 2px;
+                }
+            }
         }
     }
+
     .model {
         transform: rotate(90deg);
         width: 100vh;
@@ -1169,5 +1243,47 @@ body {
                 font-size: 13px;
             }
         }
+    }
+    .withdrwalReq{
+        
+        .modelBody{
+                h6{
+                    font-size: 12px;
+                }
+                form{
+                    margin-top: 1px;
+                    button{
+                        margin-top: 20px;
+                    }
+                    .modelInput{
+                        margin-top: 18px;
+                        input{
+                            border-radius: 5px;
+    height: 35px;
+    font-size: 12px;
+                        }
+                        select{
+                            border-radius: 5px;
+    height: 35px;
+    font-size: 12px;
+                        }
+                    }
+                }
+                .paymentShow{
+                    margin-top:20px;
+                    border-radius:6px;
+                    img{
+                        width: 52px;
+                        height: 37px;
+                    }
+                    svg{
+                        width: 52px;
+                        height: 37px;
+                    }
+                }
+        }
+    }
+    .settingModel{
+
     }
 }

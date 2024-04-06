@@ -2531,6 +2531,25 @@ body {
 }
 
 .comPlayer {
+  .backButton{
+    position: absolute;
+    left: 2px;
+    z-index: 111;
+    top: 10px;
+        width: 46px;
+    height: 46px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(23, 141, 96, 0.63);
+    border: 1px solid #33aa33;
+    img{
+      width: 40px;
+      height: 40px;
+    }
+  }
   .coin-button-box {
     margin-right: 11vh !important;
   }

@@ -928,5 +928,29 @@
       }
     }
   }
-  
+  .comPlayer{
+    .userDetails{
+      top: 56vh;
+      right: 10px;
+      padding: 1px 8px;
+      height: 54px;
+      .user-avtar{
+        img{
+          width: 38px;
+    border-radius: 50%;
+    height: 38px;
+        }
+      }
+      .user-balance{
+        margin-left: 6px;
+        h6{
+          margin-bottom: 2px;
+    font-size: 11px;
+        }
+        h5{
+          font-size: 13px;
+        }
+      }
+    }
+  }
 }
